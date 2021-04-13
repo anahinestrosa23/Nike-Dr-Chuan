@@ -2,25 +2,90 @@
     /* Stick to the top */
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: white;
     height: 10%;
 }
 
 h3 {
     text-align: center;
-    color: white;
+    color: black;
+    font-family: "Helvetica Neue"
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 10%;
+    position: sticky;
 }
 .title{
-    color: white;
+    color: black;
     text-align: center;
 }
 .container__header,
 .container__footer {
     flex-shrink: 0;
+}
+.footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  .logo{
+    margin-left: 0px;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;  
+  }
+  .topimage{
+      align-content: center;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-bottom: 10px;
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .two {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .three {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .containerone {
+    /* Align sub-items to top */
+    align-items: flex-start;
+    display: flex;
+}
+
+.container__media {
+    margin-right: 0px;
+    /* Set the width for the media object */
+    width: 50%;
+}
+
+.container__content {
+    /* Take the remaining width */
+    flex: 1;
+    width: 90%;
+    align-content: left;
+}
+h2{
+    font-size: 22px;
+    font-family: "Helvetica Neue"
 }
