@@ -1,83 +1,866 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<html lang="en">
-<link rel="stylesheet" href="css/master.css">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        svg:not(:root).svg-inline--fa {
+            overflow: visible;
+        }
 
-<div class="container">
-<nav class="navbar">
-<a class="logo"> <img src="img/nikilogo.png" alt="logo" width="5%"> </a>
-<p class="title">NIKE</p>
-</nav>
-</div>
+        .svg-inline--fa {
+            display: inline-block;
+            font-size: inherit;
+            height: 1em;
+            overflow: visible;
+            vertical-align: -0.125em;
+        }
+        .svg-inline--fa.fa-lg {
+            vertical-align: -0.225em;
+        }
+        .svg-inline--fa.fa-w-1 {
+            width: 0.0625em;
+        }
+        .svg-inline--fa.fa-w-2 {
+            width: 0.125em;
+        }
+        .svg-inline--fa.fa-w-3 {
+            width: 0.1875em;
+        }
+        .svg-inline--fa.fa-w-4 {
+            width: 0.25em;
+        }
+        .svg-inline--fa.fa-w-5 {
+            width: 0.3125em;
+        }
+        .svg-inline--fa.fa-w-6 {
+            width: 0.375em;
+        }
+        .svg-inline--fa.fa-w-7 {
+            width: 0.4375em;
+        }
+        .svg-inline--fa.fa-w-8 {
+            width: 0.5em;
+        }
+        .svg-inline--fa.fa-w-9 {
+            width: 0.5625em;
+        }
+        .svg-inline--fa.fa-w-10 {
+            width: 0.625em;
+        }
+        .svg-inline--fa.fa-w-11 {
+            width: 0.6875em;
+        }
+        .svg-inline--fa.fa-w-12 {
+            width: 0.75em;
+        }
+        .svg-inline--fa.fa-w-13 {
+            width: 0.8125em;
+        }
+        .svg-inline--fa.fa-w-14 {
+            width: 0.875em;
+        }
+        .svg-inline--fa.fa-w-15 {
+            width: 0.9375em;
+        }
+        .svg-inline--fa.fa-w-16 {
+            width: 1em;
+        }
+        .svg-inline--fa.fa-w-17 {
+            width: 1.0625em;
+        }
+        .svg-inline--fa.fa-w-18 {
+            width: 1.125em;
+        }
+        .svg-inline--fa.fa-w-19 {
+            width: 1.1875em;
+        }
+        .svg-inline--fa.fa-w-20 {
+            width: 1.25em;
+        }
+        .svg-inline--fa.fa-pull-left {
+            margin-right: 0.3em;
+            width: auto;
+        }
+        .svg-inline--fa.fa-pull-right {
+            margin-left: 0.3em;
+            width: auto;
+        }
+        .svg-inline--fa.fa-border {
+            height: 1.5em;
+        }
+        .svg-inline--fa.fa-li {
+            width: 2em;
+        }
+        .svg-inline--fa.fa-fw {
+            width: 1.25em;
+        }
 
-<head>
-    <div class="wrapper">
-        <div class="one"> <a href="https://placeholder.com"><img src="https://via.placeholder.com/1000x650" alt=""></a></div>
-        <div class="two"><a href="https://placeholder.com"><img src="https://via.placeholder.com/800x550" alt=""></a></div>
-        <div class="three"><a href="https://placeholder.com"><img src="https://via.placeholder.com/800x550" alt=""></a></div>
-      </div> 
+        .fa-layers svg.svg-inline--fa {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .fa-layers {
+            display: inline-block;
+            height: 1em;
+            position: relative;
+            text-align: center;
+            vertical-align: -0.125em;
+            width: 1em;
+        }
+        .fa-layers svg.svg-inline--fa {
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+        }
+
+        .fa-layers-counter,
+        .fa-layers-text {
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+        }
+
+        .fa-layers-text {
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+        }
+
+        .fa-layers-counter {
+            background-color: #ff253a;
+            border-radius: 1em;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #fff;
+            height: 1.5em;
+            line-height: 1;
+            max-width: 5em;
+            min-width: 1.5em;
+            overflow: hidden;
+            padding: 0.25em;
+            right: 0;
+            text-overflow: ellipsis;
+            top: 0;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: top right;
+            transform-origin: top right;
+        }
+
+        .fa-layers-bottom-right {
+            bottom: 0;
+            right: 0;
+            top: auto;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+        }
+
+        .fa-layers-bottom-left {
+            bottom: 0;
+            left: 0;
+            right: auto;
+            top: auto;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+        }
+
+        .fa-layers-top-right {
+            right: 0;
+            top: 0;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: top right;
+            transform-origin: top right;
+        }
+
+        .fa-layers-top-left {
+            left: 0;
+            right: auto;
+            top: 0;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+        }
+
+        .fa-lg {
+            font-size: 1.3333333333em;
+            line-height: 0.75em;
+            vertical-align: -0.0667em;
+        }
+
+        .fa-xs {
+            font-size: 0.75em;
+        }
+
+        .fa-sm {
+            font-size: 0.875em;
+        }
+
+        .fa-1x {
+            font-size: 1em;
+        }
+
+        .fa-2x {
+            font-size: 2em;
+        }
+
+        .fa-3x {
+            font-size: 3em;
+        }
+
+        .fa-4x {
+            font-size: 4em;
+        }
+
+        .fa-5x {
+            font-size: 5em;
+        }
+
+        .fa-6x {
+            font-size: 6em;
+        }
+
+        .fa-7x {
+            font-size: 7em;
+        }
+
+        .fa-8x {
+            font-size: 8em;
+        }
+
+        .fa-9x {
+            font-size: 9em;
+        }
+
+        .fa-10x {
+            font-size: 10em;
+        }
+
+        .fa-fw {
+            text-align: center;
+            width: 1.25em;
+        }
+
+        .fa-ul {
+            list-style-type: none;
+            margin-left: 2.5em;
+            padding-left: 0;
+        }
+        .fa-ul > li {
+            position: relative;
+        }
+
+        .fa-li {
+            left: -2em;
+            position: absolute;
+            text-align: center;
+            width: 2em;
+            line-height: inherit;
+        }
+
+        .fa-border {
+            border: solid 0.08em #eee;
+            border-radius: 0.1em;
+            padding: 0.2em 0.25em 0.15em;
+        }
+
+        .fa-pull-left {
+            float: left;
+        }
+
+        .fa-pull-right {
+            float: right;
+        }
+
+        .fa.fa-pull-left,
+        .fas.fa-pull-left,
+        .far.fa-pull-left,
+        .fal.fa-pull-left,
+        .fab.fa-pull-left {
+            margin-right: 0.3em;
+        }
+        .fa.fa-pull-right,
+        .fas.fa-pull-right,
+        .far.fa-pull-right,
+        .fal.fa-pull-right,
+        .fab.fa-pull-right {
+            margin-left: 0.3em;
+        }
+
+        .fa-spin {
+            -webkit-animation: fa-spin 2s infinite linear;
+            animation: fa-spin 2s infinite linear;
+        }
+
+        .fa-pulse {
+            -webkit-animation: fa-spin 1s infinite steps(8);
+            animation: fa-spin 1s infinite steps(8);
+        }
+
+        @-webkit-keyframes fa-spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fa-spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        .fa-rotate-90 {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .fa-rotate-180 {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .fa-rotate-270 {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+            -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+        }
+
+        .fa-flip-horizontal {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+            -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+        }
+
+        .fa-flip-vertical {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+            -webkit-transform: scale(1, -1);
+            transform: scale(1, -1);
+        }
+
+        .fa-flip-both,
+        .fa-flip-horizontal.fa-flip-vertical {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+            -webkit-transform: scale(-1, -1);
+            transform: scale(-1, -1);
+        }
+
+        :root .fa-rotate-90,
+        :root .fa-rotate-180,
+        :root .fa-rotate-270,
+        :root .fa-flip-horizontal,
+        :root .fa-flip-vertical,
+        :root .fa-flip-both {
+            -webkit-filter: none;
+            filter: none;
+        }
+
+        .fa-stack {
+            display: inline-block;
+            height: 2em;
+            position: relative;
+            width: 2.5em;
+        }
+
+        .fa-stack-1x,
+        .fa-stack-2x {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .svg-inline--fa.fa-stack-1x {
+            height: 1em;
+            width: 1.25em;
+        }
+        .svg-inline--fa.fa-stack-2x {
+            height: 2em;
+            width: 2.5em;
+        }
+
+        .fa-inverse {
+            color: #fff;
+        }
+
+        .sr-only {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .sr-only-focusable:active,
+        .sr-only-focusable:focus {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+
+        .svg-inline--fa .fa-primary {
+            fill: var(--fa-primary-color, currentColor);
+            opacity: 1;
+            opacity: var(--fa-primary-opacity, 1);
+        }
+
+        .svg-inline--fa .fa-secondary {
+            fill: var(--fa-secondary-color, currentColor);
+            opacity: 0.4;
+            opacity: var(--fa-secondary-opacity, 0.4);
+        }
+
+        .svg-inline--fa.fa-swap-opacity .fa-primary {
+            opacity: 0.4;
+            opacity: var(--fa-secondary-opacity, 0.4);
+        }
+
+        .svg-inline--fa.fa-swap-opacity .fa-secondary {
+            opacity: 1;
+            opacity: var(--fa-primary-opacity, 1);
+        }
+
+        .svg-inline--fa mask .fa-primary,
+        .svg-inline--fa mask .fa-secondary {
+            fill: black;
+        }
+
+        .fad.fa-inverse {
+            color: #fff;
+        }
+    </style>
+    <link rel="icon" href="/nike/android-icon-192x192.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="/nike/apple-touch-icon.png" />
+    <link rel="manifest" href="/nike/manifest.json" />
+    <link rel="manifest" href="/nike/manifest.json" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/cocacola_bot.css" />
+    <title>Nike. Just Do It. Nike.com</title>
+    <link href="css/main.css" rel="stylesheet" />
 </head>
 
-<body>
-    <div class="containerone">
-        <!-- Media object -->
-        <div class="container__media">
-          <img src="img/shoe1.png" alt="" width="70%"> <br><br>
-          <img src="img/shoe2.png" alt="" width="70%"> <br><br>
-          <img src="img/shoe3.png" alt="" width="70%"> <br><br>
-        </div>
-    
-        <!-- Main content -->
-        <div class="container__content">
-          <h2>A LEGEND AMONG LEGENDS.</h2>
-            <p>Nike's first lifestyle-tuned Max Air unit meets the softest, smoothest and most resilient foam yet in the Nike Air Max 270 React SE. The design draws inspiration from the Air Max pantheon, showcasing Nike's greatest innovation through micro-textured finishes that create a sensation of Air you can touch.</p>   
-            <h2>Benefits</h2>
-        <ul type="disc">
-       <li>Textured textiles on the upper create a sensation of Air you can touch.</li>
-       <li>The colors are inspired by the concepts of future sense discovery and space exploration, providing a base for the new sensory fabrics.
-       </li>
-       <li>The 270 unit delivers unrivaled, all-day comfort.
-       </li>
-       <li>Nike React technology delivers an extremely smooth ride, reduces weight and adds flexibility.
-       </li>
-       <li>The no-sew synthetic skins on the upper provide a lightweight feel and flexible fit.
-       </li>
-       <li>The soft, padded collar with low cut design feels comfortable.
-       </li>
-        </ul>
-        <h2>Product details</h2>
-        <li>Heel-to-toe rubber adds traction and durability</li>
-        <li>Pull tab</li>
-        <li>Shown: Midnight Navy/Flash Crimson/Hyper Pink/Black</li>
-        <li>Style: CK6929-400</li>
-        </ul>
-          <br> <br> <br> <br>
-          <h2>REVOLUTIONARY CUSHIONING THAT CONFORMS WITH EVERY STEP.</h2>
-          <p>The Nike Joyride Dual Run is designed to help make running feel easier and give your legs a day off. Tiny foam beads underfoot conform to your foot for cushioning that stands up to your mileage.
-        </p>
-        <h2>Conforming Cushioning</h2>
-        <p>Small foam beads are contained in 2 compartments under your heel and midfoot. They compress and adapt to your every step for better impact absorption and a stable feel.</p>
-        <h2>Enhanced Breathability</h2>
-        <p>Mesh wraps your foot in lightweight support. It lets air flow freely for cooling comfort.</p>
-        <h2>Zoned Durability </h2>
-        <p>Durable rubber is placed on the outside in high-wear zones. The raised nobs add traction.</p>
-        <h2>More Benefits</h2>
-        <ul style="disc">
-        <li>Durable, lightweight foam cushions your forefoot to promote smooth transitions.</li>
-        </ul>
-        <h2>Product Details
-        </h2>
-        <ul type="disc">
-       <li>Weight: 8.01oz (Women’s size 8)</li>
-       <li>Offset: 11mm (Forefoot: 19mm, Heel: 30mm)</li>
-       <li>Shown: White/Metallic Silver/Aura/White</li>
-       <li>Style: CD4363-103</li>
-    </ul> <br> <br> <br> <br>
-    </div>
-    </div>
-</body>
 
-<footer>
-    <div class="footer">
-        <p>Footer</p>
+  
+<body><div id="root">
+  <div class="navRoute">
+      <div class="container-style container">
+          <div class="row row-cols-lg-1">
+              <div class="col">
+                  <nav class="nav-style navbar navbar-expand-lg navbar-light fixed-top">
+                      <a href="/nike/#/" class="nav-brand navbar-brand"><img alt="" src="images/nike-logo.png" class="nav-icon" /></a>
+                      <div class="nav-link-group navbar-nav">
+                          <span class="nav-link"><fontsninja-text id="fontsninja-text-10" class="fontsninja-family-28988">NIKE</fontsninja-text></span>
+                      </div>
+                      <form class="nav-form form-inline"></form>
+                  </nav>
+              </div>
+          </div>
+          <div class="everyday-label row row-cols-lg-1">
+              <div class="col">
+                  <div>
+                      <span class="latest-title"><fontsninja-text id="fontsninja-text-15" class="fontsninja-family-variant_helvetica-neue_500_normal">Everyday Essentials</fontsninja-text></span>
+                  </div>
+              </div>
+          </div>
+          <div class="card-area intro-card row row-cols-lg-1">
+              <div class="card-col col">
+                  <div class="bg-dark text-white card-style large-card card">
+                      <img class="card-img card-image large-card-image" src="images/nike-just-do-it.jpg" alt="Card image" />
+                      <div class="card-img-overlay">
+                          <div class="intro-title text-light card-title h5"><fontsninja-text id="fontsninja-text-21" class="fontsninja-family-32632">NEW FOR</fontsninja-text></div>
+                          <div class="intro-title text-light intro-title-more card-title h5"><fontsninja-text id="fontsninja-text-22" class="fontsninja-family-32632">NEXT SEASON</fontsninja-text></div>
+                          <p class="intro-text text-light card-text">
+                              <fontsninja-text id="fontsninja-text-23" class="fontsninja-family-variant_helvetica-neue_500_normal">Must-haves for first days, first practices and more.</fontsninja-text>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card-area row row-cols-lg-2">
+              <div class="simple-card-left col">
+                  <div class="bg-dark text-white card-style medium-card card">
+                      <img class="card-img card-image medium-card-image" src="images/nike-just-do-it-1.jpg" alt="Card image" />
+                      <div class="simple-overlay card-img-overlay">
+                          <div class="simple-content">
+                              <p class="simple-text text-light card-text"><fontsninja-text id="fontsninja-text-30" class="fontsninja-family-variant_helvetica-neue_500_normal">All Day, Every Day Layers</fontsninja-text></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="simple-card-right col">
+                  <div class="bg-dark text-white card-style medium-card card">
+                      <img class="card-img card-image medium-card-image" src="images/nike-just-do-it-2.jpg" alt="Card image" />
+                      <div class="simple-overlay card-img-overlay">
+                          <div class="simple-content">
+                              <p class="simple-text text-light card-text"><fontsninja-text id="fontsninja-text-36" class="fontsninja-family-variant_helvetica-neue_500_normal">The Latest Running Essentials</fontsninja-text></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="latest-label row row-cols-lg-1">
+              <div class="col">
+                  <div>
+                      <span class="latest-title"><fontsninja-text id="fontsninja-text-40" class="fontsninja-family-variant_helvetica-neue_500_normal">Latest and Greatest</fontsninja-text></span>
+                  </div>
+              </div>
+          </div>
+          <div class="product-intro product-intro-start row">
+              <div class="product-intro-image col-md-5">
+                  <div class="product-card card">
+                      <img class="card-img-top product-card-image" src="images/air-max-270-react-se-womens-shoe-npb2CK.jpg" />
+                      <div class="product-card-body card-body">
+                          <div class="product-card-title card-title h5"><fontsninja-text id="fontsninja-text-46" class="fontsninja-family-variant_helvetica-neue_500_normal">Nike Air Max 270 React SE</fontsninja-text></div>
+                          <div class="product-card-price card-title h5"><fontsninja-text id="fontsninja-text-47" class="fontsninja-family-variant_helvetica-neue_500_normal">$170</fontsninja-text></div>
+                          <br />
+                          <p class="product-card-text card-text"><fontsninja-text id="fontsninja-text-49" class="fontsninja-family-variant_helvetica-neue_400_normal">Women's Shoe</fontsninja-text></p>
+                      </div>
+                  </div>
+              </div>
+              <div class="product-intro-text col-md-7">
+                  <div class="intro-text-one form-group">
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-54" class="fontsninja-family-variant_helvetica-neue_700_normal">A LEGEND AMONG LEGENDS.</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <fontsninja-text id="fontsninja-text-56" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                  Nike's first lifestyle-tuned Max Air unit meets the softest, smoothest and most resilient foam yet in the Nike Air Max 270 React SE. The design draws inspiration from the Air Max pantheon, showcasing
+                                  Nike's greatest innovation through micro-textured finishes that create a sensation of Air you can touch.
+                              </fontsninja-text>
+                          </label>
+                      </div>
+                      <br />
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-60" class="fontsninja-family-variant_helvetica-neue_700_normal">Benefits</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <ul>
+                                  <li><fontsninja-text id="fontsninja-text-64" class="fontsninja-family-variant_helvetica-neue_400_normal">Textured textiles on the upper create a sensation of Air you can touch.</fontsninja-text></li>
+                                  <li>
+                                      <fontsninja-text id="fontsninja-text-65" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                          The colors are inspired by the concepts of future sense discovery and space exploration, providing a base for the new sensory fabrics.
+                                      </fontsninja-text>
+                                  </li>
+                                  <li><fontsninja-text id="fontsninja-text-66" class="fontsninja-family-variant_helvetica-neue_400_normal">The 270 unit delivers unrivaled, all-day comfort.</fontsninja-text></li>
+                                  <li>
+                                      <fontsninja-text id="fontsninja-text-67" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                          Nike React technology delivers an extremely smooth ride, reduces weight and adds flexibility.
+                                      </fontsninja-text>
+                                  </li>
+                                  <li>
+                                      <fontsninja-text id="fontsninja-text-68" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                          The no-sew synthetic skins on the upper provide a lightweight feel and flexible fit.
+                                      </fontsninja-text>
+                                  </li>
+                                  <li><fontsninja-text id="fontsninja-text-69" class="fontsninja-family-variant_helvetica-neue_400_normal">The soft, padded collar with low cut design feels comfortable.</fontsninja-text></li>
+                              </ul>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-72" class="fontsninja-family-variant_helvetica-neue_700_normal">Product Details</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <ul>
+                                  <li><fontsninja-text id="fontsninja-text-76" class="fontsninja-family-variant_helvetica-neue_400_normal">Heel-to-toe rubber adds traction and durability</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-77" class="fontsninja-family-variant_helvetica-neue_400_normal">Pull tab</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-78" class="fontsninja-family-variant_helvetica-neue_400_normal">Shown: Midnight Navy/Flash Crimson/Hyper Pink/Black</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-79" class="fontsninja-family-variant_helvetica-neue_400_normal">Style: CK6929-400</fontsninja-text></li>
+                              </ul>
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="product-intro row">
+              <div class="product-intro-image col-md-5">
+                  <div class="product-card card">
+                      <img class="card-img-top product-card-image" src="images/joyride-dual-run-mens-running-shoe-8BGXtk.jpg" />
+                      <div class="product-card-body card-body">
+                          <div class="product-card-title card-title h5"><fontsninja-text id="fontsninja-text-85" class="fontsninja-family-variant_helvetica-neue_500_normal">Nike Joyride Dual Run</fontsninja-text></div>
+                          <div class="product-card-price card-title h5"><fontsninja-text id="fontsninja-text-86" class="fontsninja-family-variant_helvetica-neue_500_normal">$130</fontsninja-text></div>
+                          <br />
+                          <p class="product-card-text card-text"><fontsninja-text id="fontsninja-text-88" class="fontsninja-family-variant_helvetica-neue_400_normal">Men's Running Shoe</fontsninja-text></p>
+                      </div>
+                  </div>
+              </div>
+              <div class="product-intro-text col-md-7">
+                  <div class="intro-text-two form-group">
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-93" class="fontsninja-family-variant_helvetica-neue_700_normal">REVOLUTIONARY CUSHIONING THAT CONFORMS WITH EVERY STEP.</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <fontsninja-text id="fontsninja-text-95" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                  The Nike Joyride Dual Run is designed to help make running feel easier and give your legs a day off. Tiny foam beads underfoot conform to your foot for cushioning that stands up to your mileage.
+                              </fontsninja-text>
+                          </label>
+                      </div>
+                      <br />
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-99" class="fontsninja-family-variant_helvetica-neue_700_normal">Conforming Cushioning</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <fontsninja-text id="fontsninja-text-101" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                  Small foam beads are contained in 2 compartments under your heel and midfoot. They compress and adapt to your every step for better impact absorption and a stable feel.
+                              </fontsninja-text>
+                          </label>
+                      </div>
+                      <br />
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-105" class="fontsninja-family-variant_helvetica-neue_700_normal">Enhanced Breathability</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <fontsninja-text id="fontsninja-text-107" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                  Mesh wraps your foot in lightweight support. It lets air flow freely for cooling comfort.
+                              </fontsninja-text>
+                          </label>
+                      </div>
+                      <br />
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-111" class="fontsninja-family-variant_helvetica-neue_700_normal">Zoned Durability</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <fontsninja-text id="fontsninja-text-113" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                  Durable rubber is placed on the outside in high-wear zones. The raised nobs add traction.
+                              </fontsninja-text>
+                          </label>
+                      </div>
+                      <br />
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-117" class="fontsninja-family-variant_helvetica-neue_700_normal">More Benefits</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <ul>
+                                  <li>
+                                      <fontsninja-text id="fontsninja-text-121" class="fontsninja-family-variant_helvetica-neue_400_normal">Durable, lightweight foam cushions your forefoot to promote smooth transitions.</fontsninja-text>
+                                  </li>
+                              </ul>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-124" class="fontsninja-family-variant_helvetica-neue_700_normal">Product Details</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <ul>
+                                  <li><fontsninja-text id="fontsninja-text-128" class="fontsninja-family-variant_helvetica-neue_400_normal">Weight: 8.01oz (Women’s size 8)</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-129" class="fontsninja-family-variant_helvetica-neue_400_normal">Offset: 11mm (Forefoot: 19mm, Heel: 30mm)</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-130" class="fontsninja-family-variant_helvetica-neue_400_normal">Shown: White/Metallic Silver/Aura/White</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-131" class="fontsninja-family-variant_helvetica-neue_400_normal">Style: CD4363-103</fontsninja-text></li>
+                              </ul>
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="product-intro row">
+              <div class="product-intro-image col-md-5">
+                  <div class="product-card card">
+                      <img class="card-img-top product-card-image" src="images/air-max-90-womens-shoe-S6hW4R.jpg" />
+                      <div class="product-card-body card-body">
+                          <div class="product-card-title card-title h5"><fontsninja-text id="fontsninja-text-137" class="fontsninja-family-variant_helvetica-neue_500_normal">Nike Air Max 90</fontsninja-text></div>
+                          <div class="product-card-price card-title h5"><fontsninja-text id="fontsninja-text-138" class="fontsninja-family-variant_helvetica-neue_500_normal">$140</fontsninja-text></div>
+                          <br />
+                          <p class="product-card-text card-text"><fontsninja-text id="fontsninja-text-140" class="fontsninja-family-variant_helvetica-neue_400_normal">Women's Shoe</fontsninja-text></p>
+                      </div>
+                  </div>
+              </div>
+              <div class="product-intro-text col-md-7">
+                  <div class="intro-text-three form-group">
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-145" class="fontsninja-family-variant_helvetica-neue_700_normal">GOLD DRIP, HEEL TO TOE.</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <fontsninja-text id="fontsninja-text-147" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                  Bold, vibrant, glamorous. The Nike Air Max 90 looks to ladies night outings for its inspiration. The iconic design features a gold dubrae on each lace and a chain that attaches to either shoe as an
+                                  anklet. Slip the dubrae onto the chain to change up the look.
+                              </fontsninja-text>
+                          </label>
+                      </div>
+                      <br />
+                      <div class="form-row">
+                          <label class="form-label">
+                              <b><fontsninja-text id="fontsninja-text-151" class="fontsninja-family-variant_helvetica-neue_700_normal">Benefits</fontsninja-text></b>
+                          </label>
+                      </div>
+                      <div class="form-row">
+                          <label class="form-label">
+                              <ul>
+                                  <li><fontsninja-text id="fontsninja-text-155" class="fontsninja-family-variant_helvetica-neue_400_normal">Leather on the upper provides durability and a premium look.</fontsninja-text></li>
+                                  <li>
+                                      <fontsninja-text id="fontsninja-text-156" class="fontsninja-family-variant_helvetica-neue_400_normal">
+                                          Metallic gold dubraes on laces are detachable and attach to the chain, which you can attach to the eyelets on either shoe.
+                                      </fontsninja-text>
+                                  </li>
+                                  <li><fontsninja-text id="fontsninja-text-157" class="fontsninja-family-variant_helvetica-neue_400_normal">TPU elements on the sides and by the laces nod to the OG Air Max 90.</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-158" class="fontsninja-family-variant_helvetica-neue_400_normal">Foam midsole with Max Air unit in the heel provides lightweight cushioning.</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-159" class="fontsninja-family-variant_helvetica-neue_400_normal">Waffle outsole delivers heritage look with durable traction.</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-160" class="fontsninja-family-variant_helvetica-neue_400_normal">Shown: White/Obsidian/Beyond Pink/Bright Crimson</fontsninja-text></li>
+                                  <li><fontsninja-text id="fontsninja-text-161" class="fontsninja-family-variant_helvetica-neue_400_normal">Style: CZ8099-100</fontsninja-text></li>
+                              </ul>
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="latest-label row row-cols-lg-1">
+              <div class="col">
+                  <div>
+                      <span class="latest-title"><fontsninja-text id="fontsninja-text-165" class="fontsninja-family-variant_helvetica-neue_500_normal">Trending Now</fontsninja-text></span>
+                  </div>
+              </div>
+          </div>
+          <div class="card-area intro-card row row-cols-lg-1">
+              <div class="card-col col">
+                  <div class="bg-dark text-white card-style medium-card card">
+                      <img class="card-img card-image medium-card-image" src="images/nike-just-do-it-3.jpg" alt="Card image" />
+                      <div class="card-img-overlay">
+                          <div class="intro-title text-black card-title h5"><fontsninja-text id="fontsninja-text-171" class="fontsninja-family-32632">ICON CLASH</fontsninja-text></div>
+                          <div class="intro-title text-black intro-title-more card-title h5"><fontsninja-text id="fontsninja-text-172" class="fontsninja-family-32632">COLLECTION</fontsninja-text></div>
+                          <p class="intro-text text-black card-text"><fontsninja-text id="fontsninja-text-173" class="fontsninja-family-variant_helvetica-neue_500_normal">Bold styles with the functionality to match.</fontsninja-text></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="latest-label row row-cols-lg-1">
+              <div class="col">
+                  <div>
+                      <span class="latest-title"><fontsninja-text id="fontsninja-text-177" class="fontsninja-family-variant_helvetica-neue_500_normal">Featured Footwear</fontsninja-text></span>
+                  </div>
+              </div>
+          </div>
+          <div class="card-area row row-cols-lg-2">
+              <div class="simple-card-left col">
+                  <div class="bg-dark text-white card-style medium-card card">
+                      <img class="card-img card-image medium-card-image" src="images/nike-just-do-it-4.jpg" alt="Card image" />
+                      <div class="simple-overlay card-img-overlay">
+                          <div class="simple-content">
+                              <p class="simple-text text-light card-text"><fontsninja-text id="fontsninja-text-184" class="fontsninja-family-variant_helvetica-neue_500_normal">VaporMax 2020</fontsninja-text></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="simple-card-right col">
+                  <div class="bg-dark text-white card-style medium-card card">
+                      <img class="card-img card-image medium-card-image" src="images/nike-just-do-it-5.jpg" alt="Card image" />
+                      <div class="simple-overlay card-img-overlay">
+                          <div class="simple-content">
+                              <p class="simple-text text-black card-text"><fontsninja-text id="fontsninja-text-190" class="fontsninja-family-variant_helvetica-neue_500_normal">What's New. What's Coming.</fontsninja-text></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="latest-label row row-cols-lg-1">
+              <div class="col">
+                  <div>
+                      <span class="latest-title"><fontsninja-text id="fontsninja-text-194" class="fontsninja-family-variant_helvetica-neue_500_normal">Best Sellers</fontsninja-text></span>
+                  </div>
+              </div>
+          </div>
+          <div class="card-area row row-cols-lg-3">
+              <div class="product-card-left col">
+                  <div class="product-card card"><img class="card-img-top best-card-image" src="images/image1.jpg" /></div>
+              </div>
+              <div class="product-card-mid col">
+                  <div class="product-card card"><img class="card-img-top best-card-image" src="images/image2.jpg" /></div>
+              </div>
+              <div class="product-card-right col">
+                  <div class="product-card card"><img class="card-img-top best-card-image" src="images/image3.jpg" /></div>
+              </div>
+          </div>
+          <div class="footer-last row row-cols-lg-2">
+              <div class="footer-last-left col">
+                  <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="map-marker-alt"
+                      class="svg-inline--fa fa-map-marker-alt fa-w-12 footer-last-white"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 384 512"
+                  >
+                      <path
+                          fill="currentColor"
+                          d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+                      ></path>
+                  </svg>
+                  <span class="footer-last-white"><fontsninja-text id="fontsninja-text-209" class="fontsninja-family-variant_helvetica-neue_400_normal">&nbsp; United States &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</fontsninja-text></span>
+                  <span class="footer-last-grey"><fontsninja-text id="fontsninja-text-210" class="fontsninja-family-variant_helvetica-neue_400_normal">© 2020 Nike, Inc. All Rights Reserved</fontsninja-text></span>
+              </div>
+              <div class="footer-last-right col">
+                  <span class="footer-last-grey"><fontsninja-text id="fontsninja-text-212" class="fontsninja-family-variant_helvetica-neue_400_normal">Guides</fontsninja-text></span>
+                  <span class="footer-last-grey"><fontsninja-text id="fontsninja-text-213" class="fontsninja-family-variant_helvetica-neue_400_normal">Terms of Sale</fontsninja-text></span>
+                  <span class="footer-last-grey"><fontsninja-text id="fontsninja-text-214" class="fontsninja-family-variant_helvetica-neue_400_normal">Terms of Use</fontsninja-text></span>
+                  <span class="footer-last-grey"><fontsninja-text id="fontsninja-text-215" class="fontsninja-family-variant_helvetica-neue_400_normal">Nike Privacy Policy</fontsninja-text></span>
+              </div>
+          </div>
       </div>
-</footer>
+  </div>
+</div>
+</body>
+  
+
+
+</html>
