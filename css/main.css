@@ -1,35 +1,30 @@
 @font-face {
     font-family: TG-regular;
-    src: url("/nike/static/media/Trade Gothic LT.0631e271.ttf");
+    src: url("../fonts/Trade Gothic LT.ttf");
 }
 @font-face {
     font-family: TG-bold;
-    src: url("/nike/static/media/Trade Gothic LT Bold.cb7d0b09.ttf");
+    src: url("../fonts/Trade Gothic LT Bold.ttf");
 }
 @font-face {
     font-family: TG-bold-ob;
-    src: url("/nike/static/media/Trade Gothic LT Bold Oblique.aafd7724.ttf");
+    src: url("../fonts/Trade Gothic LT Bold Oblique.ttf");
 }
 @font-face {
     font-family: TG-light;
-    src: url("/nike/static/media/Trade Gothic LT Light.05748951.ttf");
+    src: url("../fonts/Trade Gothic LT Light.ttf");
 }
 @font-face {
     font-family: TG-ob;
-    src: url("/nike/static/media/Trade Gothic LT Oblique.e53b0db1.ttf");
+    src: url("../fonts/Trade Gothic LT Oblique.ttf");
 }
 @font-face {
     font-family: Futura;
-    src: url("/nike/static/media/Futura Condensed Extra Bold.57877025.otf");
+    src: url("../fonts/Futura Condensed Extra Bold.otf");
 }
 @font-face {
     font-family: Futura-ob;
-    src: url("/nike/static/media/Futura Condensed Extra Bold Oblique.4552cc5f.otf");
-}
-*,
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #111;
+    src: url("../fonts/Condensed Extra Bold Oblique.otf");
 }
 body {
     margin: 0;
@@ -405,4 +400,4 @@ code {
         transform: rotate(1turn);
     }
 }
-/*# sourceMappingURL=main.1a7eb1ac.chunk.css.map */
+
